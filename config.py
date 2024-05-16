@@ -1,4 +1,4 @@
-# DELAY_RPC_CALLS = 1
+DELAY_RPC_CALLS = 1
 CHAIN_RPC = {
     "Arbitrum One": "https://arbitrum.drpc.org",
     "Ethereum Mainnet": "https://ethereum-rpc.publicnode.com",
