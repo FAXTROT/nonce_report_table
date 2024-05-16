@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nonces</title>
+  <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Public key</th>
+    {% for chain in chains %}
+      <th>{{ chain }}</th>
+    {% endfor %}
+  </tr>
+  {% set count = namespace(value=0) %}
+  {% for pbk in publics %}
+  <tr>
+    <td>{{ pbk }}</td>
+    {% for chain_name, nonce_list in nonces.items() %}
+      <td>{{ nonce_list[count.value] }}</td>
+    {% endfor %}
+  </tr>
+  {% set count.value = count.value + 1 %}
+  {% endfor %}
+</table>
+
+</body>
+</html>
