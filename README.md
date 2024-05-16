@@ -10,3 +10,4 @@
 # How to config:
 ## In config.py you can freely add/remove chains, like: "chain_name": "rpc"
 ## Public keys are in publics.txt file
+## Order in cinfig.py matters, to change order in table, need to change the order in config file
