@@ -1,4 +1,5 @@
 from web3 import Web3
+import json
 
 
 def get_publics(path: str):
@@ -23,4 +24,16 @@ def get_nonces(publics: list, chains: dict) -> dict:
         except Exception as err:
             print(err)
             nonces[chain_name] = None
+    return nonces
+
+
+def get_chain_rpcs(path: str):
+    with open(path, "r") as f:
+        chain_rpcs = json.loads(f.read())
+    return chain_rpcs
+
+
+def get_stored_nonces():
+    with open("nonces.json", "r") as f:
+        nonces = json.loads(f.read())
     return nonces
