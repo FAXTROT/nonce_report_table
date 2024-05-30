@@ -6,5 +6,6 @@
     "Avalanche C-Chain ": "https://avalanche.drpc.org",
     "Base": "https://base.llamarpc.com",
     "OP Mainnet": "https://optimism.llamarpc.com",
-    "Linea": "https://linea.decubate.com"
+    "Linea": "https://linea.decubate.com",
+    "Mantle": "https://mantle.drpc.org"
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit configs</title>
+</head>
+{% include 'header.html' %}
+<body>
+<form method="POST" action="{{ url_for('edit_configs_post') }}">
+  <textarea id="configs" name="configs" rows="44" cols="80">{{ configs }}</textarea>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

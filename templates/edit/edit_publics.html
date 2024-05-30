@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit publics</title>
+</head>
+{% include 'header.html' %}
+<body>
+<form method="POST" action="{{ url_for('edit_publics_post') }}">
+  <textarea id="publics" name="publics" rows="44" cols="80">{% for pbk in publics %}
+{{ pbk }}{% endfor %}</textarea>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
